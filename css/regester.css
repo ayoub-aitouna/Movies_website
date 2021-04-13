@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: brown;
+    display: grid;
+    place-items: center;
+}
+
+.Main_panel {
+    position: relative;
+    width: 65%;
+    height: 70%;
+    border-radius: 20px;
+    background: white;
+    display: grid;
+    grid-template-columns: minmax(125px, 35%) 1fr;
+    overflow: hidden;
+}
+
+.control_panel {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    z-index: 100;
+    background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+}
+
+.control_panel.active {
+    animation: slide 1.5s ease forwards;
+}
+
+.control_panel.des {
+    animation: slide_out 1.5s ease forwards;
+}
+
+@keyframes slide {
+    0% {
+        width: 30%;
+    }
+    25% {
+        width: 40%;
+    }
+    100% {
+        width: 30%;
+        left: 70%;
+        right: 0%;
+    }
+}
+
+@keyframes slide_out {
+    0% {
+        width: 30%;
+        left: 70%;
+        right: 0%;
+    }
+    25% {
+        width: 40%;
+    }
+    100% {
+        width: 30%;
+        left: 0%;
+    }
+}
+
+.control_panel h2,
+.control_panel p {
+    width: 100%;
+    text-align: center;
+    padding: 0% 5% 5% 5%;
+    display: grid;
+    place-items: center;
+}
+
+.control_panel.active * {
+    animation: fade_out 1s ease forwards;
+}
+
+.control_panel.des * {
+    animation: fade 1s ease forwards;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade_out {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.control_panel .in {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.control_panel input {
+    width: 50%;
+    height: 50px;
+    margin: 5% 0 0 0;
+    border: 1px solid white;
+    background: none;
+    color: #fff;
+    border-radius: 30px;
+}
+
+.control_panel input:focus {
+    outline: none;
+}
+
+.input_panel {
+    position: absolute;
+    left: 31%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    right: 0%;
+}
+
+.input_panel.active {
+    animation: slid_input 1.5s ease forwards;
+}
+
+.input_panel.des {
+    animation: slid_input_out 1.5s ease forwards;
+}
+
+@keyframes slid_input {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        left: 0%;
+        right: 30%;
+    }
+}
+
+@keyframes slid_input_out {
+    from {
+        opacity: 0;
+        left: 0%;
+        right: 30%;
+    }
+    to {
+        right: 0%;
+    }
+}
+
+.title_ {
+    display: grid;
+    color: #37ecba;
+    margin-top: 30px;
+    place-items: center;
+}
+
+.social_login {
+    overflow: hidden;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    height: 50px;
+}
+
+.input_panel p {
+    width: 600px;
+    display: grid;
+    padding: 0 20px 0 20px;
+    place-items: center;
+    text-align: center;
+}
+
+.social_login ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.s {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 0 10px 0 10px;
+    filter: grayscale(50%);
+}
+
+.input {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.input_container {
+    position: relative;
+    width: 60%;
+}
+
+.input_container input {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border: none;
+    background: #eee;
+    border-radius: 5px;
+    padding-left: 40px;
+}
+
+.icon_ {
+    top: 38%;
+    left: 2%;
+    color: rgb(155, 155, 155);
+    font-size: 20px;
+    position: absolute;
+}
+
+.input_panel.active .name {
+    display: none;
+}
+
+.input_panel.des .name {
+    display: block;
+}
+
+.valid {
+    margin-top: 50px;
+    width: 160px;
+    height: 45px;
+    border-radius: 30px;
+    background-color: #fff;
+}
+
+.logout {
+    position: absolute;
+    width: 10%;
+    height: 18%;
+    background: #07b886;
+    z-index: 1000;
+    right: 6%;
+    top: 10%;
+    display: none;
+    justify-content: start;
+    padding: 1% 0 0 1%;
+    border-radius: 5px;
+}
+
+.logout.active {
+    display: flex;
+}
+
+.logout ul {
+    list-style: none;
+    color: #fff;
+}
+
+.logout ul li {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    user-select: none;
+    cursor: pointer;
+    margin: 10% 0 10% 0;
+}
+
+.logout ul li:hover {
+    color: rgb(0, 221, 210);
+}

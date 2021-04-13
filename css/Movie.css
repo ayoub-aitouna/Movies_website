@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.container img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    object-fit: cover;
+    z-index: -100;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    color: #ffffff;
+    justify-content: space-between;
+    padding: 30px 30px 0px 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.menu .menu_list ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    float: left;
+    padding-right: 20%;
+}
+
+.menu_list {
+    width: 100%;
+}
+
+.menu_list ul li {
+    padding: 0 2% 0 2%;
+    font-size: 15px;
+}
+
+.menu_list ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.search {
+    display: flex;
+}
+
+.header_icon {
+    font-size: 22px;
+    margin: 0 20px 0 20px;
+}
+
+.body {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 1fr auto;
+}
+
+.left {
+    position: relative;
+    padding: 10% 0 0 10%;
+}
+
+.backgroundcolor {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 91.8vh;
+    border-radius: 0px 200px;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+.body .right {
+    height: 180%;
+    overflow: hidden;
+}
+
+.movies ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.changer {
+    width: 90%;
+    padding: 0 5% 0 0%;
+    margin: 2% 0 0 0;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foter_icon {
+    position: absolute;
+    top: 35%;
+    font-size: 23px;
+    color: #E8E7E7;
+}
+
+.icon_left {
+    left: -4%;
+}
+
+.icon_right {
+    right: 2%;
+}
+
+.changer .pagelist {
+    width: 100%;
+}
+
+.changer .pagelist ul {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.changer .pagelist ul li {
+    width: 40%;
+    height: 100%;
+    margin: 0 1% 0 1%;
+    cursor: pointer;
+}
+
+.changer .pagelist ul li a {
+    text-decoration: none;
+}
+
+.poster {
+    position: relative;
+    width: 100%;
+    height: 80%;
+}
+
+.rate {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #e4fc11;
+    z-index: 100;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    top: 65%;
+    color: black;
+    right: -10%;
+}
+
+.poster .Movoie_img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    z-index: 1;
+}
+
+.watch {
+    margin: 5% 0 5% 0;
+    width: 150px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    background: #E8E7E7;
+    border-radius: 10px;
+}
+
+.watch .content {
+    color: #1e1e1e;
+}
+
+.p {
+    margin: 2% 0 2% 0;
+    width: 70%;
+}
+
+.right .container {
+    margin: 35% 0 0 20%;
+    width: 140%;
+    height: 140%;
+}
+
+.container .vid {
+    margin-top: 20px;
+    position: relative;
+    width: 35%;
+    height: 25%;
+    background-color: none;
+}
+
+.vid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.vid_icon {
+    position: absolute;
+    top: 35%;
+    left: 45%;
+    z-index: 1;
+    font-size: 44px;
+    cursor: pointer;
+}
+
+
+/*AtuComplet Dialog Css*/
+
+.recherch {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.input_sh {
+    width: 150%;
+    padding: 0px 10px 15px 20px;
+    border: none;
+    display: flex;
+    justify-content: start;
+    transition: 0.5s;
+}
+
+.Search_input {
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0 10px 0 30px;
+    color: #ffffff;
+}
+
+.Search_input::placeholder {
+    color: #ffffff;
+}
+
+.sherch_box {
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.autoComplet {
+    position: absolute;
+    width: 550px;
+    max-height: 250px;
+    background: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow-y: scroll;
+    display: none;
+    z-index: 1000;
+    top: 100%;
+    left: -65%;
+}
+
+.recherch.active .sherch_box .input_sh {
+    border-bottom: 1px solid #ffffff;
+    animation: fade_in 0.5s ease forwards;
+}
+
+.recherch.des .sherch_box .input_sh input {
+    animation: fade_out 0.5s ease forwards;
+}
+
+@keyframes fade_in {
+    from {
+        opacity: 0.1;
+        margin-left: -100px;
+    }
+    to {
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+
+@keyframes fade_out {
+    from {
+        opacity: 1;
+        margin-left: 0px;
+    }
+    to {
+        pointer-events: none;
+        opacity: 0.5;
+        margin-left: -50;
+    }
+}
+
+.recherch.active .sherch_box .input_sh input {
+    display: flex;
+}
+
+.autoComplet::-webkit-scrollbar {
+    width: 1em;
+    background-color: #cacaca;
+}
+
+.autoComplet::-webkit-scrollbar-track {
+    box-shadow: inset 0 10px 6px rgba(0, 0, 0, 0.3);
+}
+
+.autoComplet::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    outline: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.sherch_box.active .autoComplet {
+    display: block;
+}
+
+.sherch_box.active .input_sh {
+    width: 100%;
+}
+
+.autoComplet ul {
+    list-style: none;
+}
+
+.autoComplet ul li {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 20%;
+    background-color: rgb(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 5px 0 5px 0;
+    padding: 2px 0px;
+}
+
+.item {
+    width: 100%;
+    display: flex;
+    padding-left: 10px;
+    flex-direction: row;
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    left: 10px;
+    width: 40px;
+    height: 100%;
+    object-fit: contain;
+}
+
+.details {
+    display: flex;
+    margin-left: 60px;
+    flex-direction: column;
+}
+
+.details p {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+
+/***********************/
